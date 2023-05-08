@@ -1,0 +1,15 @@
+Pokemon App Steps. Please note that these steps are not necessarily in chronological order.
+
+1. Create a new express project called express-pokemon
+    -Don't forget to install and import required modules
+
+2. In your server.js:
+    - Initialize the app and start up the server
+    - Create a sample pokemon database. This database will be an array of objects with the following properties: name, ability, level
+    - Create 2 routes endpoints
+        - 1st Endpoint: GET /pokemonList -> Display all pokemons from your database
+        - 2nd Endpoint: POST /newpokemon -> Add a new pokemon to our database and redirect to the /pokemonList route
+    - Create a views folder and a pokemonList.ejs file inside it. Don't forget to register the template engine in your server.js
+    -Use the pokemonList.ejs file to display all the pokemons from the GET / pokemonList route endpoint 
+
+    - Finally, include a form on the pokemonList.ejs (or create a separate ejs file) file to  create a new pokemon and attach it tothe POST /newPokemon route endpoint  

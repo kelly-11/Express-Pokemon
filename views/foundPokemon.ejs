@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results Page</title>
+</head>
+<body>
+    <h1>Result</h1>
+    
+    <img src="<%=pokemonSearch.sprites.front_default%>" alt="pokemon image">
+        <h2>Name: <%=pokemonSearch.name%></h2>
+        <h2>Type: <%=pokemonSearch.types[0].type.name%></h2>
+        <h2>Ability: <%=pokemonSearch.abilities[0].ability.name%></h2>
+        <h2>Level: <%=pokemonSearch.base_experience%></h2>
+
+        <form action="/catchPokemon/<%=pokemonSearch.name%>" method="POST">
+            <button>Catch This Pokemon</button>
+        </form>
+
+        <br>
+        <a href="/">
+            <button>Homepage</button>
+        </a>
+</body>
+</html>

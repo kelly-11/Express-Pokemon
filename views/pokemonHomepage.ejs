@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon List</title>
+</head>
+<body>
+    <h1>Pokemon Collection App!</h1>
+
+    <h2>Expand Your Collection</h2>
+    
+        <img src="<%=pokemonData.sprites.front_default%>" alt="pokemon image">
+        <h2>Name: <%=pokemonData.name%></h2>
+        <h2>Type: <%=pokemonData.types[0].type.name%></h2>
+        <h2>Ability: <%=pokemonData.abilities[0].ability.name%></h2>
+        <h2>Level: <%=pokemonData.base_experience%></h2>
+
+        <form action="/foundPokemon" method="POST">
+            <input name="search" id="search" type="text">
+            <button type="submit">Find Pokemon</button>
+        </form>
+
+        <form action="/collection" method="GET">
+            <button type="submit">Go to my Collection</button>
+        </form>
+</body>
+</html>
